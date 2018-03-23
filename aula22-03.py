@@ -57,10 +57,23 @@
 #
 # 7 Crie um programa que peça uma nota de trabalho e uma de prova (as duas de 0 a 100). Se a média aritmética das notas for maior ou
 # igual a 60, escreva “Aprovado”, se não, “Reprovado”.
-n1 = int ( input ("Informe a nota 1: "))
-n2 = int ( input ("Informe a nota 2: "))
-nota = (n1 + n2) / 2
-if nota >= 60:
-    print ("Aprovado")
-else:
-    print ("Reprovado")
+# n1 = int ( input ("Informe a nota 1: "))
+# n2 = int ( input ("Informe a nota 2: "))
+# nota = (n1 + n2) / 2
+# if nota >= 60:
+#     print ("Aprovado")
+# else:
+#     print ("Reprovado")
+#
+#8 Construa um programa que recebe três valores, A, B e C. Em seguida, apresente na tela somente o maior deles.
+a = int ( input("Digite o número de A: "))
+b = int ( input("Digite o número de B: "))
+c = int ( input("Digite o número de C: "))
+if a>b and a>c:
+    print ("O maior é o A ",a)
+if b>a and b>c:
+    print ("O maior é o B ",b)
+if c>a and c>b:
+    print ("O maior é o C ",c)
+if (a==b) or (b==c) or (a==c):
+    print ("Você digitou 2 números iguais.")
