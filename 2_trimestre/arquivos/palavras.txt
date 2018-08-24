@@ -1,4 +1,1 @@
-cachorro
-gato
-cachorro
-karen
+ifpr
