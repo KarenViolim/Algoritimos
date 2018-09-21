@@ -135,9 +135,9 @@ while o != 0:
 
     elif opcao == 9:
         print("\n--- Voltando ---\n")
-        
+
     else:
         print("\n--- Opção inválida! ---\n")
 
-        print("\n\nFechando conexão com o banco...")
+        print("\nFechando conexão com o banco...")
         conexao.close()
