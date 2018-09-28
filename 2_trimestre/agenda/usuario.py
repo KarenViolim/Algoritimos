@@ -87,7 +87,7 @@ def criar_menu_usuario():
     o = 1
     while o != 0:
         print("Conectando no banco...\n\n")
-        conexao = sqlite3.connect("aula28.sqlite")
+        conexao = sqlite3.connect("usuario.sqlite")
 
         print("""
         Em relação aos usuários do sistema, você deseja...
