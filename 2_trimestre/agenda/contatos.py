@@ -32,6 +32,14 @@ def inserir_contato(conexao, nome, fone, email, usuario):
         );
     """.format(nome, fone, email, usuario)
 
+    sql = """
+        INSERT INTO usuario VALUES(
+             'Rafael Zottesso',
+             'rafael',
+             '123'
+         );
+"""
+
     cursor.execute(sql)
 
     conexao.commit()
@@ -87,10 +95,10 @@ def excluir_contato(conexao, id):
 
 ##############################################################
 def menu_contato():
-    o = 0
+    o = 1
     while o != 0:
         print("Conectando ao banco... ")
-        conexao = sqlite3.connect("contatos.sqlite")
+        conexao = sqlite3.connect("usuario.sqlite")
 
         print("""
         Em relação aos usuários do sistema, você deseja...
@@ -111,7 +119,7 @@ def menu_contato():
             t = input("Telefone: ")
             e = input("Email: ")
 
-            inserir_contato(conexao, n, t, e)
+            inserir_contato(conexao, n, t, e, usuario)
 
         elif opcao == 2:
             print("\n--- Busca de registros ---\n")
@@ -144,7 +152,5 @@ def menu_contato():
             print("\n--- Opção inválida! ---\n")
 
             print("\nFechando conexão com o banco...")
-
-        conexao.close()
-
+            conexao.close()
 menu_contato()
